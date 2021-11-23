@@ -1,0 +1,22 @@
+{
+  "name": "chaty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:client": "cd client && npm run lint",
+    "lint": "npm run lint:client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G10/Chaty.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G10/Chaty/issues"
+  },
+  "homepage": "https://github.com/GSG-G10/Chaty#readme"
+}
