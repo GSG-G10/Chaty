@@ -9,6 +9,8 @@
     "rmnm": "rm -rf node_modules && rm -rf client/node_modules && rm -rf server/node_modules",
     "lint:client": "cd client && npm run lint",
     "lint:server": "cd server && npm run lint",
+    "dev:client": "cd client && npm start",
+    "dev:server":"cd server && npm run dev",
     "lint": "npm run lint:client && npm run lint:server",
     "lint-fix:client": "cd client && npm run lint-fix",
     "lint-fix:server": "cd server && npm run lint-fix",
@@ -30,5 +32,7 @@
     "@commitlint/config-conventional": "^13.2.0",
     "nodemon": "^2.0.14"
   },
-  "engines": { "node" : "14.18.1" }
+  "engines": {
+    "node": "14.18.1"
+  }
 }
