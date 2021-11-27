@@ -4,7 +4,7 @@ import { HeaderTabs } from './components/headerTabs';
 const theme = createTheme({
   palette: {
     primary: {
-      50: 'red',
+      50: '#F0F7FF',
       100: '#C2E0FF',
       200: '#80BFFF',
       300: '#66B2FF',
@@ -58,7 +58,6 @@ const theme = createTheme({
     },
   },
 });
-console.log(theme);
 export const App = () => (
   <ThemeProvider theme={theme}>
     <HeaderTabs />
