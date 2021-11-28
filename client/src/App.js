@@ -1,5 +1,6 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { HeaderTabs } from './components/headerTabs';
+import { SearchBar } from './components/searchBar';
 
 const theme = createTheme({
   palette: {
@@ -60,6 +61,7 @@ const theme = createTheme({
 });
 export const App = () => (
   <ThemeProvider theme={theme}>
+    <SearchBar />
     <HeaderTabs />
   </ThemeProvider>
 );
