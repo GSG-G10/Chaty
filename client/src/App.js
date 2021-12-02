@@ -1,4 +1,5 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ChatCard } from './components/chatCard';
 import { HeaderTabs } from './components/headerTabs';
 import { SearchBar } from './components/searchBar';
 
@@ -17,14 +18,15 @@ const theme = createTheme({
       900: '#003A75',
     },
     secondary: {
-      main: '#4ceb34',
+      main: '#ededed',
+      A400: '#7e7f85',
     },
     white: {
       main: '#FFFFFF',
       contrastText: '#242424',
     },
-    Unread: {
-      main: '#ED32619',
+    unread: {
+      main: '#db3276',
       contrastText: '#fff',
     },
   },
@@ -63,5 +65,9 @@ export const App = () => (
   <ThemeProvider theme={theme}>
     <SearchBar />
     <HeaderTabs />
+    <ChatCard />
+    <ChatCard />
+    <ChatCard />
+    <ChatCard />
   </ThemeProvider>
 );
