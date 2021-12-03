@@ -16,18 +16,30 @@ export const ChatCard = () => (
       alignItems: 'center',
       pt: '10px',
       border: 'none',
+      // borderBottom: ' 1px solid #ededed',
+      borderRadius: 0,
+      cursor: 'pointer',
+      '&:hover': { bgcolor: '#ededed' },
     }}
   >
     <Box>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar
+            sx={{ bgcolor: red[500], width: 45, height: 45 }}
+            aria-label="recipe"
+          >
             N
           </Avatar>
         }
         title="Nour Adawi"
         subheader={
-          <Typography sx={{ fontSize: '0.9rem', color: 'secondary.A400' }}>
+          <Typography
+            sx={{
+              fontSize: '0.9rem',
+              color: 'secondary.A400',
+            }}
+          >
             {' '}
             How is everything going?
           </Typography>
@@ -39,21 +51,20 @@ export const ChatCard = () => (
         17:50
       </Typography>
       <Box
-        pl="7px"
-        pr="7px"
         borderRadius="50px"
         display="flex"
         alignItems="center"
         justifyContent="center"
-        width="auto"
-        height="30px"
+        width="fit-content"
+        height="9px"
         bgcolor={green[500]}
         color="white.main"
         fontWeight="bold"
         fontSize="0.9rem"
+        p="10px"
       >
         {' '}
-        20{' '}
+        5{' '}
       </Box>
     </Box>
   </Card>
