@@ -10,9 +10,8 @@ export const ChatCard = () => (
   <Card
     variant="outlined"
     sx={{
-      maxWidth: 345,
       display: 'flex',
-      justifyContent: 'flex-start',
+      justifyContent: 'space-between',
       alignItems: 'center',
       pt: '10px',
       border: 'none',
@@ -48,7 +47,7 @@ export const ChatCard = () => (
     </Box>
     <Box p="10px 20px 10px">
       <Typography sx={{ fontSize: '0.9rem', color: 'secondary.A400' }}>
-        17:50
+        17:50 PM
       </Typography>
       <Box
         borderRadius="50px"
@@ -56,7 +55,7 @@ export const ChatCard = () => (
         alignItems="center"
         justifyContent="center"
         width="fit-content"
-        height="9px"
+        height="8px"
         bgcolor={green[500]}
         color="white.main"
         fontWeight="bold"

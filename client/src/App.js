@@ -1,7 +1,6 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { ChatCard } from './components/chatCard';
-import { HeaderTabs } from './components/headerTabs';
-import { SearchBar } from './components/searchBar';
+
+import { InboxContainer } from './containers/inboxContainer';
 
 const theme = createTheme({
   palette: {
@@ -63,11 +62,6 @@ const theme = createTheme({
 });
 export const App = () => (
   <ThemeProvider theme={theme}>
-    <SearchBar />
-    <HeaderTabs />
-    <ChatCard />
-    <ChatCard />
-    <ChatCard />
-    <ChatCard />
+    <InboxContainer />
   </ThemeProvider>
 );
