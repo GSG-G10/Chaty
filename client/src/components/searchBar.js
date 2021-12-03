@@ -9,7 +9,7 @@ export const SearchBar = () => (
   <Paper
     component="form"
     sx={{
-      width: '24%',
+      // width: '24%',
       p: '2px 4px',
       display: 'flex',
       alignItems: 'center',
