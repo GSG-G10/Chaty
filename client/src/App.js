@@ -1,6 +1,5 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-import { InboxContainer } from './containers/inboxContainer';
+import { MainPage } from './pages/mainPage';
 
 const theme = createTheme({
   palette: {
@@ -62,6 +61,6 @@ const theme = createTheme({
 });
 export const App = () => (
   <ThemeProvider theme={theme}>
-    <InboxContainer />
+    <MainPage />
   </ThemeProvider>
 );

@@ -14,6 +14,7 @@ export const SearchBar = () => (
       display: 'flex',
       alignItems: 'center',
       boxShadow: 'none',
+      bgcolor: '#ededed',
     }}
   >
     <IconButton sx={{ p: '10px' }} aria-label="menu">
@@ -22,7 +23,7 @@ export const SearchBar = () => (
     <Box
       width="100%"
       borderRadius={12}
-      sx={{ background: '#ededed', maxHeight: '40px' }}
+      sx={{ background: '#fff', maxHeight: '40px' }}
     >
       <IconButton type="submit" sx={{ p: '5px' }} aria-label="search">
         <SearchIcon />

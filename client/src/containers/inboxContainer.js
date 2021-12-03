@@ -4,11 +4,13 @@ import { HeaderTabs } from '../components/headerTabs';
 import { SearchBar } from '../components/searchBar';
 
 export const InboxContainer = () => (
-  <Box m="7px" width="30%" minWidth="350px">
-    <SearchBar />
-    <HeaderTabs />
+  <Box width="30%" minWidth="350px" bgcolor="#ededed">
+    <Box Height="16vh">
+      <SearchBar />
+      <HeaderTabs />
+    </Box>
     <Box
-      maxHeight="100vh"
+      maxHeight="calc(100vh - 16vh)"
       overflow="auto"
       sx={{
         '&::-webkit-scrollbar': {
@@ -18,7 +20,7 @@ export const InboxContainer = () => (
           borderRadius: '20px',
         },
         '&::-webkit-scrollbar-thumb': {
-          backgroundColor: '#d8dff0',
+          backgroundColor: '#cfd0d4',
           borderRadius: '20px',
         },
       }}

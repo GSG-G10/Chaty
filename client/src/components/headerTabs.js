@@ -4,7 +4,8 @@ import { styled } from '@mui/system';
 import Tabs from '@mui/material/Tabs';
 
 const AntTabs = styled(Tabs)({
-  // width: '25%',
+  marginLeft: '5px',
+  marginRight: '5px',
   background: '#007fff',
   borderBottom: '1px solid #007fff',
   borderRadius: '13px',
