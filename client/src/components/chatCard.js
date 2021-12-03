@@ -47,7 +47,7 @@ export const ChatCard = () => (
     </Box>
     <Box p="10px 20px 10px">
       <Typography sx={{ fontSize: '0.9rem', color: 'secondary.A400' }}>
-        17:50 PM
+        17:50
       </Typography>
       <Box
         borderRadius="50px"
