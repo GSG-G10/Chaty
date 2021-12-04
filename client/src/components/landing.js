@@ -26,10 +26,7 @@ export const Landing = () => {
           Select a chat to start messaging
         </Typography>
       ) : (
-        <Box
-        // height="100vh"
-        // width="100%"
-        >
+        <Box height="100vh" width="100%">
           <ChatWindow />
         </Box>
       )}

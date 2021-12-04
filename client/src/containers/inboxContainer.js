@@ -9,7 +9,7 @@ export const InboxContainer = () => (
     minWidth="350px"
     bgcolor="#ededed"
     height="100vh%"
-    borderRight="2px solid #b0b0b0"
+    borderRight="1px solid #fff"
   >
     <Box Height="16vh">
       <SearchBar />
