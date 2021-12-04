@@ -1,3 +1,3 @@
-import { Box } from '@mui/system';
+import { Landing } from '../components/landing';
 
-export const Chatcontainer = () => <Box>Hello!</Box>;
+export const Chatcontainer = () => <Landing />;

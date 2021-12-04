@@ -4,7 +4,7 @@ import { HeaderTabs } from '../components/headerTabs';
 import { SearchBar } from '../components/searchBar';
 
 export const InboxContainer = () => (
-  <Box width="30%" minWidth="350px" bgcolor="#ededed">
+  <Box width="45%" minWidth="350px" bgcolor="#ededed" height="50vh">
     <Box Height="16vh">
       <SearchBar />
       <HeaderTabs />
