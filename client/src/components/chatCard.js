@@ -58,7 +58,6 @@ export const ChatCard = () => (
         height="8px"
         bgcolor={green[500]}
         color="white.main"
-        fontWeight="bold"
         fontSize="0.9rem"
         p="10px"
       >
