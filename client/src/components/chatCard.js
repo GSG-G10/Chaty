@@ -55,14 +55,15 @@ export const ChatCard = () => (
         alignItems="center"
         justifyContent="center"
         width="fit-content"
-        height="8px"
+        height="6px"
         bgcolor={green[500]}
         color="white.main"
-        fontSize="0.9rem"
+        fontSize="0.8rem"
         p="10px"
+        ml="11px"
       >
         {' '}
-        5{' '}
+        2{' '}
       </Box>
     </Box>
   </Card>
