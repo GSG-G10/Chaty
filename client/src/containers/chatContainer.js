@@ -1,6 +1,3 @@
-import { Box } from '@mui/system';
-import Image from '../assets/bg.jpg';
+import { Landing } from '../components/landing';
 
-export const Chatcontainer = () => (
-  <Box height="100vh" width="100%" sx={{ backgroundImage: `url(${Image})` }} />
-);
+export const Chatcontainer = () => <Landing />;
