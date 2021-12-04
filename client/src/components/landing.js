@@ -1,6 +1,7 @@
-import { Typography } from '@mui/material';
+// import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import Image from '../assets/bg.jpg';
+import { ChatWindow } from './chatWindow';
 
 export const Landing = () => (
   <Box
@@ -11,7 +12,7 @@ export const Landing = () => (
     width="100%"
     sx={{ backgroundImage: `url(${Image})` }}
   >
-    <Typography
+    {/* <Typography
       borderRadius="20px"
       p="3px 14px"
       color="#fff"
@@ -20,6 +21,7 @@ export const Landing = () => (
       fontFamily="revert"
     >
       Select a chat to start messaging
-    </Typography>
+    </Typography> */}
+    <ChatWindow />
   </Box>
 );
