@@ -13,7 +13,7 @@ export const Landing = () => (
   >
     <Typography
       borderRadius="20px"
-      p="4px 13px"
+      p="3px 14px"
       color="#fff"
       fontSize="0.8rem"
       bgcolor="rgba(0, 0, 0, 0.23)"
