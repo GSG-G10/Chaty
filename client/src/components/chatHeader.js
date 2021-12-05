@@ -6,14 +6,24 @@ export const ChatHeader = () => (
     p="6px 25px"
     display="flex"
     flexDirection="column"
-    height="6.5%"
+    height="40px"
     bgcolor="#fafafa"
     width="100%"
   >
-    <Typography fontWeight="normal" fontSize="0.96rem" color="#343a40">
+    <Typography
+      width="200px"
+      fontWeight="normal"
+      fontSize="0.96rem"
+      color="#343a40"
+    >
       Nour Adawi
     </Typography>
-    <Typography fontWeight="400" fontSize="0.8rem" color="#a0a8b0">
+    <Typography
+      width="200px"
+      fontWeight="400"
+      fontSize="0.8rem"
+      color="#a0a8b0"
+    >
       Last seen 5 minutes ago
     </Typography>
   </Box>
