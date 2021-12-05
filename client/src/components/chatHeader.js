@@ -7,7 +7,7 @@ export const ChatHeader = () => (
     display="flex"
     flexDirection="column"
     height="40px"
-    bgcolor="#fafafa"
+    bgcolor="#ededed"
     width="100%"
   >
     <Typography
