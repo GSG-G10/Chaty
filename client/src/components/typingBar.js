@@ -11,6 +11,7 @@ export const TypingBar = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    // eslint-disable-next-line no-console
     console.log('here submit', message);
   };
 
