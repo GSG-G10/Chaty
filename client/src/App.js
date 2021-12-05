@@ -4,16 +4,7 @@ import { MainPage } from './pages/mainPage';
 const theme = createTheme({
   palette: {
     primary: {
-      50: '#F0F7FF',
-      100: '#C2E0FF',
-      200: '#80BFFF',
-      300: '#66B2FF',
-      400: '#3399FF',
-      500: '#007FFF',
-      600: '#0072E5',
-      700: '#0059B2',
-      800: '#004C99',
-      900: '#003A75',
+      main: '#010b14',
     },
     secondary: {
       main: '#ededed',
@@ -28,6 +19,7 @@ const theme = createTheme({
       contrastText: '#fff',
     },
   },
+
   typography: {
     fontSize: 16,
     h1: {
