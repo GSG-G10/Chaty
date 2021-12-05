@@ -6,8 +6,9 @@ export const ChatHeader = () => (
     p="6px 25px"
     display="flex"
     flexDirection="column"
-    height="auto"
+    height="6.5%"
     bgcolor="#fafafa"
+    width="100%"
   >
     <Typography fontWeight="normal" fontSize="0.96rem" color="#343a40">
       Nour Adawi

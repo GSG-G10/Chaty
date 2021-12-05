@@ -2,11 +2,12 @@
 import { Box } from '@mui/system';
 import { ChatHeader } from './chatHeader';
 // import { MsgCard } from './msgCard';
-// import { TypingBar } from './typingBar';
+import { TypingBar } from './typingBar';
 // import Image from '../assets/bg.jpg';
 
 export const ChatWindow = () => (
-  <Box>
+  <Box display="flex" height="100vh" width="100%" flexWrap="wrap">
     <ChatHeader />
+    <TypingBar />
   </Box>
 );
