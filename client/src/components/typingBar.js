@@ -20,7 +20,7 @@ export const TypingBar = () => {
   };
 
   const handleKeypress = (e) => {
-    if (e.code === 'Enter') {
+    if (e.code === 'Enter' && !e.shiftKey) {
       handleSubmit(e);
     }
   };
