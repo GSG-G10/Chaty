@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import AttachFileOutlinedIcon from '@mui/icons-material/AttachFileOutlined';
 import MoodIcon from '@mui/icons-material/Mood';
 import SendIcon from '@mui/icons-material/Send';
-// import { Typography } from '@mui/material';
+import { Button } from '@mui/material';
 
 export const TypingBar = () => {
   const [message, setMessage] = useState('');
@@ -20,7 +20,7 @@ export const TypingBar = () => {
   };
   return (
     <Box
-      p="6px 25px"
+      p="6px 35px"
       display="flex"
       justifyContent="center"
       alignItems="center"
@@ -29,9 +29,6 @@ export const TypingBar = () => {
       alignSelf="flex-end"
       width="100%"
     >
-      {/* <Typography fontWeight="normal" fontSize="0.96rem" color="#343a40">
-      typing bar
-    </Typography> */}
       <AttachFileOutlinedIcon
         fontWeight="normal"
         cursor="pointer"
@@ -42,6 +39,9 @@ export const TypingBar = () => {
         component="form"
         autoComplete="off"
         onSubmit={handleSubmit}
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
       >
         <TextField
           multiline
@@ -71,29 +71,31 @@ export const TypingBar = () => {
             pb: '10px',
           }}
         />
+        <MoodIcon
+          fontWeight="normal"
+          cursor="pointer"
+          sx={{
+            height: '1.7rem',
+            width: '1.7rem',
+            ml: '5px',
+            mr: '5px',
+            color: '#595959',
+          }}
+        />
+        <Button type="submit">
+          <SendIcon
+            fontWeight="normal"
+            cursor="pointer"
+            type="submit"
+            sx={{
+              height: '1.8rem',
+              width: '1.8rem',
+              mr: '15px',
+              color: message ? '#097aeb' : '#595959',
+            }}
+          />{' '}
+        </Button>
       </Box>
-      <MoodIcon
-        fontWeight="normal"
-        cursor="pointer"
-        sx={{
-          height: '1.7rem',
-          width: '1.7rem',
-          ml: '5px',
-          mr: '5px',
-          color: '#595959',
-        }}
-      />
-      <SendIcon
-        fontWeight="normal"
-        cursor="pointer"
-        sx={{
-          height: '1.7rem',
-          width: '1.7rem',
-          ml: '5px',
-          mr: '5px',
-          color: '#595959',
-        }}
-      />
     </Box>
   );
 };

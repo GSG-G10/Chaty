@@ -4,10 +4,10 @@ import { MainPage } from './pages/mainPage';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#010b14',
+      main: '#007FFF',
     },
     secondary: {
-      main: '#ededed',
+      main: '#007fff',
       A400: '#7e7f85',
     },
     white: {
