@@ -10,9 +10,19 @@ export const TypingBar = () => {
   const [message, setMessage] = useState('');
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    // eslint-disable-next-line no-console
-    console.log('here submit', message);
+    if (message) {
+      event.preventDefault();
+      // eslint-disable-next-line no-console
+      console.log('here submit', message);
+    } else {
+      event.preventDefault();
+    }
+  };
+
+  const handleKeypress = (e) => {
+    if (e.code === 'Enter') {
+      handleSubmit(e);
+    }
   };
 
   const handleChange = (event) => {
@@ -52,6 +62,7 @@ export const TypingBar = () => {
           onChange={handleChange}
           size="small"
           fullWidth
+          onKeyPress={handleKeypress}
           InputProps={{
             style: {
               backgroundColor: '#fff',
