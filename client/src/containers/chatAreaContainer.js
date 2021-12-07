@@ -1,6 +1,6 @@
 // import { Box } from '@mui/system';
 // import { ChatWindow } from '../components/chatWindow';
-import { Landing } from '../components/landing';
+import { Landing } from './landingContainer';
 // import Image from '../assets/bg.jpg';
 
 export const Chatcontainer = () => (

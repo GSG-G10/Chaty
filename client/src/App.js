@@ -18,6 +18,12 @@ const theme = createTheme({
       main: '#db3276',
       contrastText: '#fff',
     },
+    sent: {
+      main: '#fafafa',
+    },
+    received: {
+      main: '#9db1cc',
+    },
   },
 
   typography: {
