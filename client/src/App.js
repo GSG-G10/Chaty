@@ -19,7 +19,7 @@ const theme = createTheme({
       contrastText: '#fff',
     },
     sent: {
-      main: '#fafafa',
+      main: '#e6f0fc',
     },
     received: {
       main: '#9db1cc',
