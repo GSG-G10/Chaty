@@ -3,12 +3,12 @@ import { Box } from '@mui/system';
 
 export const ChatHeader = () => (
   <Box
-    p="6px 25px"
     display="flex"
     flexDirection="column"
     height="40px"
     bgcolor="#ededed"
     width="100%"
+    p="5px"
   >
     <Typography
       width="200px"
