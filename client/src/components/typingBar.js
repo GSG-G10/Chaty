@@ -5,10 +5,10 @@ import AttachFileOutlinedIcon from '@mui/icons-material/AttachFileOutlined';
 import MoodIcon from '@mui/icons-material/Mood';
 import SendIcon from '@mui/icons-material/Send';
 import { Button } from '@mui/material';
+import propTypes from 'prop-types';
 
-export const TypingBar = ({ setHeigther }) => {
+export const TypingBar = ({ setmessageHeight }) => {
   const [message, setMessage] = useState('');
-
   const handleSubmit = (event) => {
     if (message) {
       event.preventDefault();
@@ -28,25 +28,22 @@ export const TypingBar = ({ setHeigther }) => {
   useEffect(() => {
     const lines =
       (message.match(/\n/g) || '' || message.length >= 49).length + 1;
-    console.log(lines);
     if (!message) {
-      setHeigther(60);
+      setmessageHeight(60);
     }
     if (lines < 8) {
-      setHeigther(lines * 30 + 20);
+      setmessageHeight(lines * 30 + 20);
     }
-  }, [message]);
+  }, [message, setmessageHeight]);
 
   const handleChange = (event) => {
     setMessage(event.target.value);
   };
   return (
     <Box
-      // p="6px 35px"
       display="flex"
       justifyContent="center"
       alignItems="center"
-      // height="70px"
       height="100%"
       position="absolute"
       bottom="0"
@@ -127,4 +124,8 @@ export const TypingBar = ({ setHeigther }) => {
       </Box>
     </Box>
   );
+};
+
+TypingBar.propTypes = {
+  setmessageHeight: propTypes.func.isRequired,
 };
