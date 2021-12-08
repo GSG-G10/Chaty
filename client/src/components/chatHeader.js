@@ -3,7 +3,6 @@ import { Box } from '@mui/system';
 
 export const ChatHeader = () => (
   <Box
-    p="6px 25px"
     display="flex"
     flexDirection="column"
     height="40px"

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box } from '@mui/system';
 import TextField from '@mui/material/TextField';
 import AttachFileOutlinedIcon from '@mui/icons-material/AttachFileOutlined';
@@ -6,7 +6,7 @@ import MoodIcon from '@mui/icons-material/Mood';
 import SendIcon from '@mui/icons-material/Send';
 import { Button } from '@mui/material';
 
-export const TypingBar = () => {
+export const TypingBar = ({ setHeigther }) => {
   const [message, setMessage] = useState('');
 
   const handleSubmit = (event) => {
@@ -25,16 +25,32 @@ export const TypingBar = () => {
     }
   };
 
+  useEffect(() => {
+    const lines =
+      (message.match(/\n/g) || '' || message.length >= 49).length + 1;
+    console.log(lines);
+    if (!message) {
+      setHeigther(60);
+    }
+    if (lines < 8) {
+      setHeigther(lines * 30 + 20);
+    }
+  }, [message]);
+
   const handleChange = (event) => {
     setMessage(event.target.value);
   };
   return (
     <Box
-      p="6px 35px"
+      // p="6px 35px"
       display="flex"
       justifyContent="center"
       alignItems="center"
-      height="auto"
+      // height="70px"
+      height="100%"
+      position="absolute"
+      bottom="0"
+      right="0"
       bgcolor="#ededed"
       alignSelf="flex-end"
       width="100%"
@@ -46,6 +62,8 @@ export const TypingBar = () => {
       />
       <Box
         width="100%"
+        height="100%"
+        maxHeight="100%"
         component="form"
         autoComplete="off"
         onSubmit={handleSubmit}
@@ -78,8 +96,8 @@ export const TypingBar = () => {
                 border: 'none',
               },
             },
-            pt: '10px',
-            pb: '10px',
+            maxHeight: '200px',
+            overflow: 'auto',
           }}
         />
         <MoodIcon

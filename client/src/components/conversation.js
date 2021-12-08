@@ -1,17 +1,16 @@
 import { Box } from '@mui/system';
 import { MessageCard } from './messageCard';
 
-export const Conversation = () => {
+export const Conversation = ({ heigther }) => {
   const text = 'hi from props, do I look good? ';
   return (
     <Box
-      height="80%"
+      // maxHeight={`calc(100% - ${heigther}px)`}
+      height="100%"
       width="100%"
       display="flex"
       flexDirection="column"
-      maxHeight="80%"
       overflow="auto"
-      m="0 5px"
       sx={{
         '&::-webkit-scrollbar': {
           width: '0.3em',
@@ -26,8 +25,45 @@ export const Conversation = () => {
         },
       }}
     >
+      <MessageCard type="sent" msg="11111111111" />
+      <MessageCard type="received" msg={text} />
       <MessageCard type="sent" msg={text} />
       <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg={text} />
+      <MessageCard type="received" msg={text} />
+      <MessageCard type="sent" msg="4674545" />
+      <MessageCard type="sent" msg="4674545" />
+      <MessageCard type="sent" msg="4674545" />
+      <MessageCard type="received" msg="4674545" />
     </Box>
   );
 };
