@@ -14,7 +14,7 @@ export const ChatWindow = () => {
       </div>
       <div
         style={{
-          height: `calc(100% -  ${messageHeight + 40}px`,
+          height: `calc(100% -  ${messageHeight + 50}px`,
           width: '100%',
           marginTop: '12px',
         }}

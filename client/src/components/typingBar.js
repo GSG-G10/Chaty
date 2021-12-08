@@ -51,6 +51,7 @@ export const TypingBar = ({ setmessageHeight }) => {
       bgcolor="#ededed"
       alignSelf="flex-end"
       width="100%"
+      p="2px 0"
     >
       <AttachFileOutlinedIcon
         fontWeight="normal"
