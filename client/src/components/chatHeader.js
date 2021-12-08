@@ -8,6 +8,7 @@ export const ChatHeader = () => (
     height="40px"
     bgcolor="#ededed"
     width="100%"
+    p="5px"
   >
     <Typography
       width="200px"

@@ -1,5 +1,6 @@
 import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
+import propTypes from 'prop-types';
 
 export const MessageCard = ({ type, msg }) => (
   <Box
@@ -7,7 +8,7 @@ export const MessageCard = ({ type, msg }) => (
     height="fit-content"
     maxWidth="450px"
     width="fit-content"
-    m="0 30px"
+    m="0 60px"
     mb="12px"
     boxShadow="0 1px 4px #8a8a8a"
     borderRadius="5px"
@@ -19,3 +20,8 @@ export const MessageCard = ({ type, msg }) => (
     </Typography>
   </Box>
 );
+
+MessageCard.propTypes = {
+  type: propTypes.string.isRequired,
+  msg: propTypes.string.isRequired,
+};

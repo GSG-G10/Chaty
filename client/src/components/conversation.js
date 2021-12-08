@@ -11,6 +11,7 @@ export const Conversation = ({ heigther }) => {
       display="flex"
       flexDirection="column"
       overflow="auto"
+      mt="15px"
       sx={{
         '&::-webkit-scrollbar': {
           width: '0.3em',
