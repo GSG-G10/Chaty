@@ -17,10 +17,9 @@ switch (NODE_ENV) {
 }
 
 const connection = () => {
-  mongoose
-    .connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('database connection successful'))
-    .catch((err) => console.log(err));
+  mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+  // .then(() => console.log('database connection successful'))
+  // .catch((err) => console.log(err));
 };
 
 module.exports = connection;
