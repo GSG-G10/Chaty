@@ -10,7 +10,7 @@
     "lint:client": "cd client && npm run lint",
     "lint:server": "cd server && npm run lint",
     "dev:client": "cd client && npm start",
-    "dev:server":"cd server && npm run dev",
+    "dev:server": "cd server && npm run dev",
     "lint": "npm run lint:client && npm run lint:server",
     "lint-fix:client": "cd client && npm run lint-fix",
     "lint-fix:server": "cd server && npm run lint-fix",
