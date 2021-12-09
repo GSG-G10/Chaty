@@ -4,6 +4,7 @@ const messageSchema = new Schema({
   sender: { type: Schema.Types.ObjectId, ref: 'users' },
   reciever: { type: Schema.Types.ObjectId, ref: 'users' },
   chat: { type: Schema.Types.ObjectId, ref: 'chats' },
+  content: { type: 'String', required: true },
   sentAt: { type: 'Date', default: Date.now },
   seenAt: { type: 'Date' },
 });

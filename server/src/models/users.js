@@ -4,9 +4,9 @@ const userSchema = new Schema({
   userName: { type: 'String', required: true },
   firstName: { type: 'String' },
   lastName: { type: 'String' },
-  phone: { type: 'Number', required: true },
+  phone: { type: 'String', required: true },
   email: { type: 'String', required: true, unique: true },
-  active: { type: 'Boolean' },
+  active: { type: 'Boolean', default: false },
   lastSeen: { type: 'Date', default: Date.now },
 });
 
