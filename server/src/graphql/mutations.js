@@ -1,9 +1,4 @@
-const {
-  GraphQLList,
-  GraphQLString,
-  GraphQLId,
-  GraphQLNonNull,
-} = require('graphql');
+const { GraphQLString, GraphQLId, GraphQLNonNull } = require('graphql');
 const { UserType, ChatType, MessageType } = require('./types');
 const {
   userQueries,
@@ -20,11 +15,11 @@ const UserMutation = {
     description: 'Add new user',
     type: UserType,
     args: {
-      userName: { type: GraphQLNonNull(GraphQLString) },
+      userName: { type: new GraphQLNonNull(GraphQLString) },
       firstName: { type: GraphQLString },
       lastName: { type: GraphQLString },
-      phone: { type: GraphQLNonNull(GraphQLString) },
-      email: { type: GraphQLNonNull(GraphQLString) },
+      phone: { type: new GraphQLNonNull(GraphQLString) },
+      email: { type: new GraphQLNonNull(GraphQLString) },
     },
     resolve: (parent, args) => addUser(args),
   },
@@ -35,8 +30,8 @@ const ChatMutation = {
     description: 'Fetch all chats for a specific user',
     type: ChatType,
     args: {
-      user1: { type: GraphQLNonNull(GraphQLId) },
-      user2: { type: GraphQLNonNull(GraphQLId) },
+      user1: { type: GraphQLId },
+      user2: { type: GraphQLId },
     },
     resolve: (parent, args) => createChat(args),
   },
@@ -45,15 +40,20 @@ const ChatMutation = {
 const MessageMutation = {
   chatMessages: {
     description: 'Fetch messages for a specific chat',
-    type: new GraphQLList(MessageType),
+    type: MessageType,
     args: {
-      sender: { type: GraphQLNonNull(GraphQLId) },
-      reciever: { type: GraphQLNonNull(GraphQLId) },
-      chat: { type: GraphQLNonNull(GraphQLId) },
-      content: { type: GraphQLNonNull(GraphQLString) },
+      sender: { type: GraphQLId },
+      reciever: { type: GraphQLId },
+      chat: { type: GraphQLId },
+      content: { type: new GraphQLNonNull(GraphQLString) },
     },
     resolve: (parent, args) => createMessage(args),
   },
 };
 
-module.exports = { UserMutation, ChatMutation, MessageMutation };
+module.exports = {
+  UserMutation,
+  ChatMutation,
+  MessageMutation,
+  name: 'Root mutation',
+};
