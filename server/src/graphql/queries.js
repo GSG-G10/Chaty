@@ -1,4 +1,9 @@
-const { GraphQLList, GraphQLString, GraphQLId } = require('graphql');
+const {
+  GraphQLList,
+  GraphQLString,
+  GraphQLID,
+  GraphQLObjectType,
+} = require('graphql');
 const { UserType, ChatType, MessageType } = require('./types');
 const {
   userQueries,
@@ -34,10 +39,20 @@ const MessageQuery = {
     description: 'Fetch messages for a specific chat',
     type: new GraphQLList(MessageType),
     args: {
-      id: { type: GraphQLId },
+      id: { type: GraphQLID },
     },
     resolve: (parent, args) => findChatMessages(args.id),
   },
 };
 
-module.exports = { UserQuery, ChatQuery, MessageQuery, name: 'Root Query' };
+const RootQuery = new GraphQLObjectType({
+  name: 'Query',
+  description: 'Root Query',
+  fields: () => ({
+    ...UserQuery,
+    ...ChatQuery,
+    ...MessageQuery,
+  }),
+});
+
+module.exports = RootQuery;

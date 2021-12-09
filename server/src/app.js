@@ -5,10 +5,11 @@ const cookieParser = require('cookie-parser');
 // const cors = require('cors');
 const { join } = require('path');
 const router = require('./router');
+const { connection } = require('./database');
 // const { errorHandler } = require('./controllers/error');
 
 const app = express();
-
+connection();
 // app.use(cors());
 app.use(compression());
 app.use(cookieParser());
