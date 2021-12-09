@@ -1,4 +1,9 @@
-const { GraphQLString, GraphQLId, GraphQLNonNull } = require('graphql');
+const {
+  GraphQLString,
+  GraphQLID,
+  GraphQLNonNull,
+  GraphQLObjectType,
+} = require('graphql');
 const { UserType, ChatType, MessageType } = require('./types');
 const {
   userQueries,
@@ -26,34 +31,38 @@ const UserMutation = {
 };
 
 const ChatMutation = {
-  userChats: {
-    description: 'Fetch all chats for a specific user',
+  createChat: {
+    description: 'Create new chat',
     type: ChatType,
     args: {
-      user1: { type: GraphQLId },
-      user2: { type: GraphQLId },
+      user1: { type: GraphQLID },
+      user2: { type: GraphQLID },
     },
     resolve: (parent, args) => createChat(args),
   },
 };
 
 const MessageMutation = {
-  chatMessages: {
-    description: 'Fetch messages for a specific chat',
+  creataMessage: {
+    description: 'create new message',
     type: MessageType,
     args: {
-      sender: { type: GraphQLId },
-      reciever: { type: GraphQLId },
-      chat: { type: GraphQLId },
+      sender: { type: GraphQLID },
+      reciever: { type: GraphQLID },
+      chat: { type: GraphQLID },
       content: { type: new GraphQLNonNull(GraphQLString) },
     },
     resolve: (parent, args) => createMessage(args),
   },
 };
 
-module.exports = {
-  UserMutation,
-  ChatMutation,
-  MessageMutation,
-  name: 'Root mutation',
-};
+const RootMutation = new GraphQLObjectType({
+  name: 'Mutataion',
+  description: 'Root Mutation',
+  fields: () => ({
+    ...UserMutation,
+    ...ChatMutation,
+    ...MessageMutation,
+  }),
+});
+module.exports = RootMutation;
