@@ -10,6 +10,7 @@ const schema = new GraphQLSchema({
 
 const GraphQLServer = graphqlHTTP({
   schema,
+  graphiql: true,
 });
 
 module.exports = GraphQLServer;

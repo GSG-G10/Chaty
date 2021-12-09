@@ -40,4 +40,4 @@ const MessageQuery = {
   },
 };
 
-module.exports = { UserQuery, ChatQuery, MessageQuery };
+module.exports = { UserQuery, ChatQuery, MessageQuery, name: 'Root Query' };
